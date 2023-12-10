@@ -1,5 +1,5 @@
-<!-- <?php 
-	require_once 'php/utils.php'; 
+<?php 
+/*	require_once 'php/utils.php'; 
 	
 	if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 		header("Location: login");
@@ -19,9 +19,9 @@
 	}
 	else {
 		exit;
-	}
+	} */
 
-?> -->
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
