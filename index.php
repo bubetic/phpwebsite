@@ -11,7 +11,7 @@ include_once 'footer.php';
 ?>
 
 
-</html>
+
 #<?php 
 #	require_once 'php/utils.php'; 
 #	
