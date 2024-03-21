@@ -1,6 +1,13 @@
-<?php
-    echo "Hello Azure!";
-?>
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Bubetic News</h1>
+
+<?php echo "The Best PHP Examples"; ?>
+
+</body>
+</html> 
 #<?php 
 #	require_once 'php/utils.php'; 
 #	
