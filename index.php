@@ -1,13 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="csrf_token" content="<?php echo createToken(); ?>" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="dmsite.png">
+  <title>dusanmilovanovic</title>
+</head>
+
 <body>
+  <main>
+    <ul>
+      <li><a class="active" href="#home">Home</a></li>
+      <li><a href="#news">News</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="login.html">Login</a></li>
+    </ul>
+    <h1>Dusan Milovanovic</h1>
+    <div class="paragraf">
+      <p>This site is for personal use only. Probably you are lost and not sure how you end up here.</p>
+      <p>Just jump to <a href="https://google.com">google.com</a> and you'll be fine.</p>
+    </div>
+<?php
+include_once 'footer.php';
+?>
 
-<h1>Bubetic News</h1>
 
-<?php echo "The Best PHP Examples"; ?>
-
-</body>
-</html> 
+</html>
 #<?php 
 #	require_once 'php/utils.php'; 
 #	
