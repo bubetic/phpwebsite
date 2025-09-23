@@ -1,6 +1,25 @@
 <?php
 	require_once 'config.php';
 
+	// --- Centralized secure session configuration ---
+	if(session_status() !== PHP_SESSION_ACTIVE) {
+		$useHttps = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') || (isset($_SERVER['SERVER_PORT']) && $_SERVER['SERVER_PORT'] == 443);
+		// Set cookie params before starting session
+		$cookieParams = [
+			'lifetime' => 0,
+			'path' => '/',
+			'domain' => '',
+			'secure' => $useHttps,
+			'httponly' => true,
+			'samesite' => 'Lax'
+		];
+		if(function_exists('session_set_cookie_params')) {
+			session_set_cookie_params($cookieParams);
+		}
+		// Start session after configuring cookie params
+		session_start();
+	}
+
 	use PHPMailer\PHPMailer\PHPMailer;
 	use PHPMailer\PHPMailer\Exception;
 
@@ -83,6 +102,26 @@
 	}
 	function urlSafeDecode($m) {
 		return base64_decode(strtr($m, '-_', '+/'));
+	}
+
+	// --- Session integrity helpers ---
+	function validateSessionClient() {
+		$currIp = isset($_SERVER['REMOTE_ADDR']) ? $_SERVER['REMOTE_ADDR'] : '';
+		$currUa = isset($_SERVER['HTTP_USER_AGENT']) ? $_SERVER['HTTP_USER_AGENT'] : '';
+		if(!isset($_SESSION['ip']) || !isset($_SESSION['ua'])) {
+			return false;
+		}
+		if($_SESSION['ip'] !== $currIp) {
+			return false;
+		}
+		if($_SESSION['ua'] !== $currUa) {
+			return false;
+		}
+		return true;
+	}
+
+	function isAuthenticated() {
+		return isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true && isset($_SESSION['userID']);
 	}
 
 

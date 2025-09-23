@@ -3,7 +3,7 @@
 
 
 	if(isset($_POST['csrf_token']) && validateToken($_POST['csrf_token'])) {
-		if(isset($_SESSION['loggedin']) && isset($_SESSION['userID']) && $_SESSION['loggedin'] === true) {
+		if(isAuthenticated() && validateSessionClient()) {
 			$C = connect();
 			if($C) {
 				if(sqlUpdate($C, 'DELETE FROM users WHERE id=?', 'i', $_SESSION['userID'])) {
