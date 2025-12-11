@@ -1,6 +1,3 @@
-<?php
-require_once 'php/utils.php';
-?>
 <!DOCTYPE html>
 <html lang="en">
 
