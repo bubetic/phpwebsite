@@ -1,8 +1,5 @@
 <?php
-// Include utils for CSRF token generation if not already included
-if (!function_exists('createToken')) {
-  require_once 'php/utils.php';
-}
+require_once 'php/utils.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
