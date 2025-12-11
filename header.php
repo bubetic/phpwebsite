@@ -16,6 +16,6 @@
       <li><a href="#news">News</a></li>
       <li><a href="#contact">Contact</a></li>
       <li><a href="#about">About</a></li>
-      <li><a href="register.php">Sign Up</a></li>
-      <li><a href="login.php">Login</a></li>
+      <li><a href="#signup">Sign Up</a></li>
+      <li><a href="#login">Login</a></li>
     </ul>
