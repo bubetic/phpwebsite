@@ -1,5 +1,6 @@
 <?php 
-	require_once 'php/utils.php';
+	// require_once 'php/utils.php';
+	include_once 'header.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
