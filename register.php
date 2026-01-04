@@ -44,6 +44,6 @@
 	</div>
 
 
-	<script src="<?php echo dirname($_SERVER['PHP_SELF']) . '/script.js' ?>"></script>
+	// <script src="<?php echo dirname($_SERVER['PHP_SELF']) . '/script.js' ?>"></script>
 </body>
 </html>
