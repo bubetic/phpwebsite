@@ -5,7 +5,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta name="csrf_token" content="<?php echo createToken(); ?>" />
+	<!-- <meta name="csrf_token" content="<?php echo createToken(); ?>" /> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Register - Secure Site</title>
 	<link rel="stylesheet" href="<?php echo dirname($_SERVER['PHP_SELF']) . '/style.css'; ?>" />
@@ -18,22 +18,22 @@
 			<div id="errs" class="errcontainer"></div>
 			<div class="inputblock">
 				<label for="name">Name</label>
-				<!--<input id="name" name="name" type="text" autocomplete="name" placeholder="Enter your name" onkeydown="if(event.key === 'Enter'){event.preventDefault();register();}" />
+				<input id="name" name="name" type="text" autocomplete="name" placeholder="Enter your name" onkeydown="if(event.key === 'Enter'){event.preventDefault();register();}" />
 			</div>
 			<div class="inputblock">
 				<label for="email">Email</label>
-				<!-- <input id="email" name="email" type="email" autocomplete="email" placeholder="Enter your email" onkeydown="if(event.key === 'Enter'){event.preventDefault();register();}" /> -->
+				<input id="email" name="email" type="email" autocomplete="email" placeholder="Enter your email" onkeydown="if(event.key === 'Enter'){event.preventDefault();register();}" />
 			</div>
 			<div class="inputblock">
 				<label for="password">Password</label>
-				<!-- <input id="password" name="password" type="password" autocomplete="new-password" placeholder="Enter your password" onkeydown="if(event.key === 'Enter'){event.preventDefault();register();}" /> -->
+				<input id="password" name="password" type="password" autocomplete="new-password" placeholder="Enter your password" onkeydown="if(event.key === 'Enter'){event.preventDefault();register();}" />
 			</div>
 			<div class="inputblock">
 				<label for="confirm-password">Confirm Password</label>
-				<!-- <input id="confirm-password" name="confirm-password" type="password" autocomplete="new-password" placeholder="Confirm your password" onkeydown="if(event.key === 'Enter'){event.preventDefault();register();}" /> -->
+				<input id="confirm-password" name="confirm-password" type="password" autocomplete="new-password" placeholder="Confirm your password" onkeydown="if(event.key === 'Enter'){event.preventDefault();register();}" />
 			</div>
 			<br>
-			<!-- <div class="btn" onclick="register();">Sign Up</div> -->
+			<div class="btn" onclick="register();">Sign Up</div>
 			<br>
 			<br>
 			<br>
