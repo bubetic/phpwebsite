@@ -33,7 +33,7 @@
 				<!-- <input id="confirm-password" name="confirm-password" type="password" autocomplete="new-password" placeholder="Confirm your password" onkeydown="if(event.key === 'Enter'){event.preventDefault();register();}" /> -->
 			</div>
 			<br>
-			<div class="btn" onclick="register();">Sign Up</div>
+			<!-- <div class="btn" onclick="register();">Sign Up</div> -->
 			<br>
 			<br>
 			<br>
