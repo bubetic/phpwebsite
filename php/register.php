@@ -1,5 +1,5 @@
 <?php
-	require_once 'sendValidationEmail.php';
+	// require_once 'sendValidationEmail.php';
 	$errors = [];
 
 
@@ -9,9 +9,9 @@
 	if(!isset($_POST['email']) || strlen($_POST['email']) > 255 || !filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
 		$errors[] = 2;
 	}
-	else if(!checkdnsrr(substr($_POST['email'], strpos($_POST['email'], '@') + 1), 'MX')) {
-		$errors[] = 3;
-	}
+	// else if(!checkdnsrr(substr($_POST['email'], strpos($_POST['email'], '@') + 1), 'MX')) {
+	// 	$errors[] = 3;
+	// }
 	if(!isset($_POST['password']) || !preg_match('/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[\~?!@#\$%\^&\*])(?=.{8,})/', $_POST['password'])) {
 		$errors[] = 4;
 	}
@@ -33,13 +33,14 @@
 					$hash = password_hash($_POST['password'], PASSWORD_DEFAULT);
 					$id = sqlInsert($C, 'INSERT INTO users VALUES (NULL, ?, ?, ?, 0)', 'sss', $_POST['name'], $_POST['email'], $hash);
 					if($id !== -1) {
-						$err = sendValidationEmail($_POST['email']);
-						if($err === 0) {
-							$errors[] = 0;
-						}
-						else {
-							$errors[] = $err + 9;
-						}
+						// $err = sendValidationEmail($_POST['email']);
+						// if($err === 0) {
+						// 	$errors[] = 0;
+						// }
+						// else {
+						// 	$errors[] = $err + 9;
+						// }
+						$errors[] = 0; // Account created successfully (email validation disabled)
 					}
 					else {
 						//Failed to insert into database
