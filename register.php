@@ -1,5 +1,5 @@
 <?php 
-	require_once 'php/utils.php';
+	//require_once 'php/utils.php';
 	//$csrfToken = createToken();
 	include_once 'header.php';
 ?>
