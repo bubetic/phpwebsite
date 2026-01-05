@@ -9,10 +9,22 @@ function request(url, data, callback) {
 	document.body.appendChild(loader);
 	xhr.addEventListener('readystatechange', function() {
 		if(xhr.readyState === 4) {
-			if(callback) {
+			loader.remove();
+			if(xhr.status === 200 && callback) {
+				callback(xhr.response);
+			} else if(xhr.status === 404) {
+				console.error('404 Not Found: ' + url);
+				if(callback) {
+					callback('{"error": "File not found. Please check the server configuration."}');
+				}
+			} else if(xhr.status >= 500) {
+				console.error('Server Error ' + xhr.status + ': ' + url);
+				if(callback) {
+					callback('{"error": "Server error occurred. Please try again later."}');
+				}
+			} else if(callback) {
 				callback(xhr.response);
 			}
-			loader.remove();
 		}
 	});
 
