@@ -1,8 +1,17 @@
 <?php
+require_once 'php/utils.php';
+$csrfToken = createToken();
 include_once 'header.php';
 ?>
+	<script>
+		// Inject CSRF token into head
+		var meta = document.createElement('meta');
+		meta.name = 'csrf_token';
+		meta.content = '<?php echo $csrfToken; ?>';
+		document.head.appendChild(meta);
+	</script>
 	<div class="formWrapper">
-		<form id="loginForm">
+		<form id="loginForm" onsubmit="event.preventDefault(); login(); return false;">
 			<h1>Log In</h1>
 			<div id="errs" class="errcontainer"></div>
 			<div class="inputblock">
