@@ -95,6 +95,13 @@ a {
   color: rgb(206, 233, 201);
 }
 
+.register {
+  text-align: center;
+  border: 1cap;
+  position: center;
+  color: rgb(206, 233, 201);
+}
+
 img {
   position: center;
   width: 10px;
