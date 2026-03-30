@@ -1,7 +1,7 @@
 <?php 
-	require_once 'php/utils.php';
+	require_once __DIR__ . '/php/utils.php';
 	//$csrfToken = createToken();
-	include_once 'header.php';
+	include_once __DIR__ . '/header.php';
 ?>
 	<div class="formWrapper">
 		<form id="registerForm">
@@ -35,5 +35,5 @@
 	</div>
 	<script src="<?php echo dirname($_SERVER['PHP_SELF']) . '/script.js' ?>"></script>
 <?php
-include_once 'footer.php';
+include_once __DIR__ . '/footer.php';
 ?>

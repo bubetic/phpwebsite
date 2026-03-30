@@ -1,5 +1,5 @@
 <?php
-include_once 'header.php';
+include_once __DIR__ . '/header.php';
 ?>
     <h1>Dusan Milovanovic</h1>
     <div class="paragraf">
@@ -7,5 +7,5 @@ include_once 'header.php';
       <p>Just jump to <a href="https://google.com">google.com</a> and you'll be fine.</p>
     </div>
 <?php
-include_once 'footer.php';
+include_once __DIR__ . '/footer.php';
 ?>

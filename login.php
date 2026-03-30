@@ -1,5 +1,5 @@
 <?php
-include_once 'header.php';
+include_once __DIR__ . '/header.php';
 ?>
 	<div class="formWrapper">
 		<form id="loginForm">
@@ -27,5 +27,5 @@ include_once 'header.php';
 	</div>
 	<script src="<?php echo dirname($_SERVER['PHP_SELF']) . '/script.js' ?>"></script>
 <?php
-include_once 'footer.php';
+include_once __DIR__ . '/footer.php';
 ?>

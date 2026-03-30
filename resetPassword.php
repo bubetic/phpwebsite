@@ -1,5 +1,5 @@
 <?php 
-	require_once 'php/utils.php';
+	require_once __DIR__ . '/php/utils.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
